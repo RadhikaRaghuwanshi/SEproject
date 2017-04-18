@@ -164,8 +164,61 @@ input[type = "submit"]:hover, #myBtn:hover{
   src="http://www.click360.in/virtualtour/lordganeshfestival/lalbaugcharaja/2016/lalbaugcharaja2016.html" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" framespacing="0"> </iframe>
  
   <div class="desc"></div>
+  <button id="myBtn">Report</button>
+  
+</div>
+<div id="myModal" class="modal">
+	<div class="modal-content">
+	  <span class="close">&times;</span>
+	  <h3 style="color:#F48A12">Report</h3>
+	  <form id="form">
+		<input type="checkbox" name="category">Sexual content<br>
+		<input type="checkbox" name="category">Violent or repulsive content<br>
+		<input type="checkbox" name="category">Hateful or abusive content<br>
+		<input type="checkbox" name="category">Harmful dangerous acts<br>
+		<input type="checkbox" name="category">Child abuse<br>
+		<input type="checkbox" name="category">Infringes my rights<br>
+		<input type="checkbox" name="category">Spam or misleading<br><br>
+		<input type="submit" id ="1" value="Report" onclick="validate();">
+	  </form>
+	</div>
+</div>
 
+<script type="text/javascript">
+var modal = document.getElementById('myModal');
+
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+function validate(){
+var form= document.getElementById("form");
+	if((form.category[0].checked == false) && (form.category[1].checked == false) && (form.category[2].checked == false) && (form.category[3].checked == false) 
+	&& (form.category[4].checked == false) && (form.category[5].checked == false) && (form.category[6].checked == false))
+	{
+	alert("Please select atleast one category.");
+	}
+    else
+	{
+	alert("ok");
+	}
+	}
+	
+	
+</script>
 </body>
 </html>
-
 
