@@ -127,5 +127,7 @@ function checkit(){
 }
 	
 </script>
+<h1>This is second version of report</h1>
+
 </body>
 </html>
